@@ -1,0 +1,23 @@
+<div id="app">
+    <h1>Vue Mart</h1>
+    <h2>Colors</h2>
+    <div id="app">
+        <button v-on:click="showColor">Cliquez ici !</button>
+        <h2>{{ color }}</h2>
+        <input id="change-color" type="text" v-model="color">
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    const app = new Vue({
+        el: '#app',
+        data: {
+            color: 'bleu',
+        },
+        methods: {
+            showColor() {
+                alert(this.color)
+            },
+        },
+    })
+</script>
